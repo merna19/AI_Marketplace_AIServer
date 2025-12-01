@@ -1,0 +1,236 @@
+﻿{
+  "Scenario": "Classification",
+  "DataSource": {
+    "Version": 3,
+    "EscapeCharacter": "\"",
+    "ReadMultiLines": false,
+    "KeepDiacritics": false,
+    "KeepPunctuations": false,
+    "AllowQuoting": false,
+    "Type": "TabularFile",
+    "FilePath": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Models\\Intent\\Training Data\\bitext_ecommerce_with_greeting_embeddings.csv",
+    "Delimiter": ",",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "text",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "intent",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 3,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestOva",
+        "Score": 0.99659810249776759,
+        "RuntimeInSeconds": 3.821,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e4 * e11",
+          "e0": {
+            "InputColumnName": "text",
+            "OutputColumnName": "text"
+          },
+          "e1": {
+            "InputColumnNames": [
+              "text"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e11": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "OutputColumnName": "intent",
+            "InputColumnName": "intent",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e4": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "intent",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastTreeOva",
+        "Score": 0.98760728047536483,
+        "RuntimeInSeconds": 3.745,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e11",
+          "e0": {
+            "InputColumnName": "text",
+            "OutputColumnName": "text"
+          },
+          "e1": {
+            "InputColumnNames": [
+              "text"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e11": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "OutputColumnName": "intent",
+            "InputColumnName": "intent",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 254,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "intent",
+            "FeatureColumnName": "Features",
+            "DiskTranspose": false
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastTreeOva",
+        "Score": 0.98760728047536483,
+        "RuntimeInSeconds": 6.919,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e10 * e11",
+          "e0": {
+            "InputColumnName": "text",
+            "OutputColumnName": "text"
+          },
+          "e1": {
+            "InputColumnNames": [
+              "text"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e10": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 254,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "intent",
+            "FeatureColumnName": "Features",
+            "DiskTranspose": true
+          },
+          "e11": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "OutputColumnName": "intent",
+            "InputColumnName": "intent",
+            "AddKeyValueAnnotationsAsText": false
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "SdcaMaximumEntropyMulti",
+        "Score": 0.16666666666666666,
+        "RuntimeInSeconds": 1.079,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e8 * e11",
+          "e0": {
+            "InputColumnName": "text",
+            "OutputColumnName": "text"
+          },
+          "e1": {
+            "InputColumnNames": [
+              "text"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e11": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "OutputColumnName": "intent",
+            "InputColumnName": "intent",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e8": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "intent",
+            "FeatureColumnName": "Features"
+          }
+        }
+      }
+    ],
+    "Estimators": {
+      "e0": "FeaturizeText",
+      "e1": "Concatenate",
+      "e2": "MapValueToKey",
+      "e3": "FastTreeOva",
+      "e4": "FastForestOva",
+      "e5": "LightGbmMulti",
+      "e6": "LbfgsLogisticRegressionOva",
+      "e7": "LbfgsMaximumEntropyMulti",
+      "e8": "SdcaMaximumEntropyMulti",
+      "e9": "SdcaLogisticRegressionOva",
+      "e10": "FastTreeOva",
+      "e11": "MapKeyToValue"
+    },
+    "Schema": "e0 * e1 * e2 * (e3 + e4 + e5 + e6 + e7 + e8 + e9 + e10) * e11",
+    "MetricName": "MacroAccuracy",
+    "ModelFilePath": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Models\\Intent\\Intent Model\\IntentModel.mlnet"
+  },
+  "Type": "TrainingConfig",
+  "Version": 5,
+  "TrainingOption": {
+    "Version": 2,
+    "Subsampling": true,
+    "Tuner": "eci-cfo",
+    "Type": "ClassificationTrainingOption",
+    "TrainingTime": 60,
+    "OptimizeMetric": "MacroAccuracy",
+    "LabelColumn": "intent",
+    "AvailableTrainers": [
+      "SDCA",
+      "LBFGS",
+      "LGBM",
+      "FASTTREE",
+      "FASTTREE-DISKTRANSPOSE",
+      "FASTFOREST"
+    ],
+    "ValidationOption": {
+      "Version": 0,
+      "Type": "TrainValidateSplitValidationOption",
+      "SplitRatio": 0.3
+    }
+  }
+}

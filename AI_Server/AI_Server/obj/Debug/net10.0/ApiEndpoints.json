@@ -1,0 +1,34 @@
+[
+  {
+    "ContainingType": "AI_Server.Controllers.AIController",
+    "Method": "PredictMood",
+    "RelativePath": "api/AI",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "inputDTO",
+        "Type": "AI_Server.DTOs.MoodModel.MoodModelInDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AI_Server.Controllers.AIController",
+    "Method": "PredictIntent",
+    "RelativePath": "IntentModel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "inputDTO",
+        "Type": "AI_Server.DTOs.MoodModel.IntentModelInDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

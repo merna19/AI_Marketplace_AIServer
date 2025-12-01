@@ -1,0 +1,324 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|f:\\iti\\.net full stack\\final project\\ai github repo\\ai_server\\ai_server\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|solutionrelative:ai_server\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|f:\\iti\\.net full stack\\final project\\ai github repo\\ai_server\\ai_server\\repositories\\genericclassificationmodelrepo\\services\\genericclassificationmodelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|solutionrelative:ai_server\\repositories\\genericclassificationmodelrepo\\services\\genericclassificationmodelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|f:\\iti\\.net full stack\\final project\\ai github repo\\ai_server\\ai_server\\controllers\\aicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|solutionrelative:ai_server\\controllers\\aicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|f:\\iti\\.net full stack\\final project\\ai github repo\\ai_server\\ai_server\\dtos\\intentmodel\\intentmodeloutdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|solutionrelative:ai_server\\dtos\\intentmodel\\intentmodeloutdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|f:\\iti\\.net full stack\\final project\\ai github repo\\ai_server\\ai_server\\infrastructure\\models\\intentmodel\\intentinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|solutionrelative:ai_server\\infrastructure\\models\\intentmodel\\intentinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|f:\\iti\\.net full stack\\final project\\ai github repo\\ai_server\\ai_server\\models\\intent\\intentmodel\\intentmodel.consumption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|solutionrelative:ai_server\\models\\intent\\intentmodel\\intentmodel.consumption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|f:\\iti\\.net full stack\\final project\\ai github repo\\ai_server\\ai_server\\infrastructure\\models\\intentmodel\\intentoutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|solutionrelative:ai_server\\infrastructure\\models\\intentmodel\\intentoutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|f:\\iti\\.net full stack\\final project\\ai github repo\\ai_server\\ai_server\\infrastructure\\models\\moodmodel\\moodoutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|solutionrelative:ai_server\\infrastructure\\models\\moodmodel\\moodoutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|f:\\iti\\.net full stack\\final project\\ai github repo\\ai_server\\ai_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|solutionrelative:ai_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|f:\\iti\\.net full stack\\final project\\ai github repo\\ai_server\\ai_server\\ai_server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|solutionrelative:ai_server\\ai_server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|f:\\iti\\.net full stack\\final project\\ai github repo\\ai_server\\ai_server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|solutionrelative:ai_server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|f:\\iti\\.net full stack\\final project\\ai github repo\\ai_server\\ai_server\\models\\intent\\intentmodel\\intentmodel.training.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|solutionrelative:ai_server\\models\\intent\\intentmodel\\intentmodel.training.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|f:\\iti\\.net full stack\\final project\\ai github repo\\ai_server\\ai_server\\dtos\\intentmodel\\intentmodelindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|solutionrelative:ai_server\\dtos\\intentmodel\\intentmodelindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|f:\\iti\\.net full stack\\final project\\ai github repo\\ai_server\\ai_server\\dtos\\moodmodel\\moodmodelindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|solutionrelative:ai_server\\dtos\\moodmodel\\moodmodelindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|f:\\iti\\.net full stack\\final project\\ai github repo\\ai_server\\ai_server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|solutionrelative:ai_server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|f:\\iti\\.net full stack\\final project\\ai github repo\\ai_server\\ai_server\\models\\intent\\intentmodel\\intentmodel.mbconfig||{93FA4DC3-61EC-47AF-B0BA-50CAD3CAF049}",
+      "RelativeMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|solutionrelative:ai_server\\models\\intent\\intentmodel\\intentmodel.mbconfig||{93FA4DC3-61EC-47AF-B0BA-50CAD3CAF049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|f:\\iti\\.net full stack\\final project\\ai github repo\\ai_server\\ai_server\\repositories\\genericclassificationmodelrepo\\interfaces\\igenericclassificationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|solutionrelative:ai_server\\repositories\\genericclassificationmodelrepo\\interfaces\\igenericclassificationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|f:\\iti\\.net full stack\\final project\\ai github repo\\ai_server\\ai_server\\dtos\\moodmodel\\moodmodeloutdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62336B44-4F7F-DC8B-1E7E-FF5493D9D5AC}|AI_Server\\AI_Server.csproj|solutionrelative:ai_server\\dtos\\moodmodel\\moodmodeloutdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AIController.cs",
+              "DocumentMoniker": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Controllers\\AIController.cs",
+              "RelativeDocumentMoniker": "AI_Server\\Controllers\\AIController.cs",
+              "ToolTip": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Controllers\\AIController.cs",
+              "RelativeToolTip": "AI_Server\\Controllers\\AIController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAhwC4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T08:35:10.176Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IntentModel.consumption.cs",
+              "DocumentMoniker": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Models\\Intent\\IntentModel\\IntentModel.consumption.cs",
+              "RelativeDocumentMoniker": "AI_Server\\Models\\Intent\\IntentModel\\IntentModel.consumption.cs",
+              "ToolTip": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Models\\Intent\\IntentModel\\IntentModel.consumption.cs",
+              "RelativeToolTip": "AI_Server\\Models\\Intent\\IntentModel\\IntentModel.consumption.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAhwC0AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T00:49:21.764Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IntentInput.cs",
+              "DocumentMoniker": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Infrastructure\\Models\\IntentModel\\IntentInput.cs",
+              "RelativeDocumentMoniker": "AI_Server\\Infrastructure\\Models\\IntentModel\\IntentInput.cs",
+              "ToolTip": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Infrastructure\\Models\\IntentModel\\IntentInput.cs",
+              "RelativeToolTip": "AI_Server\\Infrastructure\\Models\\IntentModel\\IntentInput.cs",
+              "ViewState": "AgIAAAAAAABwmZmZmZknwAgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T00:49:51.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GenericClassificationModelService.cs",
+              "DocumentMoniker": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Repositories\\GenericClassificationModelRepo\\Services\\GenericClassificationModelService.cs",
+              "RelativeDocumentMoniker": "AI_Server\\Repositories\\GenericClassificationModelRepo\\Services\\GenericClassificationModelService.cs",
+              "ToolTip": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Repositories\\GenericClassificationModelRepo\\Services\\GenericClassificationModelService.cs",
+              "RelativeToolTip": "AI_Server\\Repositories\\GenericClassificationModelRepo\\Services\\GenericClassificationModelService.cs",
+              "ViewState": "AgIAAAcAAADgMjMzMzMywBYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T15:14:20.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Mapping\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "AI_Server\\Mapping\\MappingProfile.cs",
+              "ToolTip": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Mapping\\MappingProfile.cs",
+              "RelativeToolTip": "AI_Server\\Mapping\\MappingProfile.cs",
+              "ViewState": "AgIAAAcAAAAIvszMzMwWwAsAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T15:37:38.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IntentModelOutDTO.cs",
+              "DocumentMoniker": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\DTOs\\IntentModel\\IntentModelOutDTO.cs",
+              "RelativeDocumentMoniker": "AI_Server\\DTOs\\IntentModel\\IntentModelOutDTO.cs",
+              "ToolTip": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\DTOs\\IntentModel\\IntentModelOutDTO.cs",
+              "RelativeToolTip": "AI_Server\\DTOs\\IntentModel\\IntentModelOutDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T00:54:25.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IntentOutput.cs",
+              "DocumentMoniker": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Infrastructure\\Models\\IntentModel\\IntentOutput.cs",
+              "RelativeDocumentMoniker": "AI_Server\\Infrastructure\\Models\\IntentModel\\IntentOutput.cs",
+              "ToolTip": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Infrastructure\\Models\\IntentModel\\IntentOutput.cs",
+              "RelativeToolTip": "AI_Server\\Infrastructure\\Models\\IntentModel\\IntentOutput.cs",
+              "ViewState": "AgIAAAQAAAAAAjMzMzPjvxMAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T00:50:41.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MoodOutput.cs",
+              "DocumentMoniker": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Infrastructure\\Models\\MoodModel\\MoodOutput.cs",
+              "RelativeDocumentMoniker": "AI_Server\\Infrastructure\\Models\\MoodModel\\MoodOutput.cs",
+              "ToolTip": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Infrastructure\\Models\\MoodModel\\MoodOutput.cs",
+              "RelativeToolTip": "AI_Server\\Infrastructure\\Models\\MoodModel\\MoodOutput.cs",
+              "ViewState": "AgIAAAIAAABgZWZmZmYkwAYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T15:54:48.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Program.cs",
+              "RelativeDocumentMoniker": "AI_Server\\Program.cs",
+              "ToolTip": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Program.cs",
+              "RelativeToolTip": "AI_Server\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T01:16:09.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AI_Server.csproj",
+              "DocumentMoniker": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\AI_Server.csproj",
+              "RelativeDocumentMoniker": "AI_Server\\AI_Server.csproj",
+              "ToolTip": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\AI_Server.csproj",
+              "RelativeToolTip": "AI_Server\\AI_Server.csproj",
+              "ViewState": "AgIAAAUAAABImZmZmZkrwBEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-30T12:55:13.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\appsettings.json",
+              "RelativeDocumentMoniker": "AI_Server\\appsettings.json",
+              "ToolTip": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\appsettings.json",
+              "RelativeToolTip": "AI_Server\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-01T00:59:51.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IntentModel.training.cs",
+              "DocumentMoniker": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Models\\Intent\\IntentModel\\IntentModel.training.cs",
+              "RelativeDocumentMoniker": "AI_Server\\Models\\Intent\\IntentModel\\IntentModel.training.cs",
+              "ToolTip": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Models\\Intent\\IntentModel\\IntentModel.training.cs",
+              "RelativeToolTip": "AI_Server\\Models\\Intent\\IntentModel\\IntentModel.training.cs",
+              "ViewState": "AgIAAGAAAAAA2szMzMwMwAsAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T00:58:36.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IntentModelInDTO.cs",
+              "DocumentMoniker": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\DTOs\\IntentModel\\IntentModelInDTO.cs",
+              "RelativeDocumentMoniker": "AI_Server\\DTOs\\IntentModel\\IntentModelInDTO.cs",
+              "ToolTip": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\DTOs\\IntentModel\\IntentModelInDTO.cs",
+              "RelativeToolTip": "AI_Server\\DTOs\\IntentModel\\IntentModelInDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T00:54:39.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MoodModelInDTO.cs",
+              "DocumentMoniker": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\DTOs\\MoodModel\\MoodModelInDTO.cs",
+              "RelativeDocumentMoniker": "AI_Server\\DTOs\\MoodModel\\MoodModelInDTO.cs",
+              "ToolTip": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\DTOs\\MoodModel\\MoodModelInDTO.cs",
+              "RelativeToolTip": "AI_Server\\DTOs\\MoodModel\\MoodModelInDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T22:28:46.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IntentModel.mbconfig",
+              "DocumentMoniker": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Models\\Intent\\IntentModel\\IntentModel.mbconfig",
+              "RelativeDocumentMoniker": "AI_Server\\Models\\Intent\\IntentModel\\IntentModel.mbconfig",
+              "ToolTip": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Models\\Intent\\IntentModel\\IntentModel.mbconfig",
+              "RelativeToolTip": "AI_Server\\Models\\Intent\\IntentModel\\IntentModel.mbconfig",
+              "Icon": "7f5c38b0-f0bc-4551-a9a8-b4f467cc4670.000012|",
+              "WhenOpened": "2025-12-01T00:17:29.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "AI_Server\\Properties\\launchSettings.json",
+              "ToolTip": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Properties\\launchSettings.json",
+              "RelativeToolTip": "AI_Server\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAABePRAAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-30T15:50:01.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IGenericClassificationModel.cs",
+              "DocumentMoniker": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Repositories\\GenericClassificationModelRepo\\Interfaces\\IGenericClassificationModel.cs",
+              "RelativeDocumentMoniker": "AI_Server\\Repositories\\GenericClassificationModelRepo\\Interfaces\\IGenericClassificationModel.cs",
+              "ToolTip": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Repositories\\GenericClassificationModelRepo\\Interfaces\\IGenericClassificationModel.cs",
+              "RelativeToolTip": "AI_Server\\Repositories\\GenericClassificationModelRepo\\Interfaces\\IGenericClassificationModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T17:38:39.177Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MoodModelOutDTO.cs",
+              "DocumentMoniker": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\DTOs\\MoodModel\\MoodModelOutDTO.cs",
+              "RelativeDocumentMoniker": "AI_Server\\DTOs\\MoodModel\\MoodModelOutDTO.cs",
+              "ToolTip": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\DTOs\\MoodModel\\MoodModelOutDTO.cs",
+              "RelativeToolTip": "AI_Server\\DTOs\\MoodModel\\MoodModelOutDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T16:26:20.682Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
