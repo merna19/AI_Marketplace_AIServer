@@ -78,3 +78,4 @@ F:\iti\.net full stack\final project\AI GitHub Repo\AI_Server\AI_Server\obj\Debu
 F:\iti\.net full stack\final project\AI GitHub Repo\AI_Server\AI_Server\obj\Debug\net10.0\ref\AI_Server.dll
 F:\iti\.net full stack\final project\AI GitHub Repo\AI_Server\AI_Server\bin\Debug\net10.0\Models\Intent\IntentModel\IntentModel.mlnet
 F:\iti\.net full stack\final project\AI GitHub Repo\AI_Server\AI_Server\bin\Debug\net10.0\Models\Mood\MoodModel\MoodModel.mlnet
+F:\iti\.net full stack\final project\AI GitHub Repo\AI_Server\AI_Server\obj\Debug\net10.0\AI_Server.sourcelink.json

@@ -6,10 +6,12 @@ using System.Linq;
 using System.IO;
 using System.Collections.Generic;
 using AI_Server.Infrastructure.Models.IntentModel;
+
 namespace AI_Server
 {
     public partial class IntentModel
     {
+        
 
         private static string MLNetModelPath = Path.GetFullPath("IntentModel.mlnet");
 

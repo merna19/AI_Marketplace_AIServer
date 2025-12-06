@@ -10,12 +10,11 @@ using Microsoft.ML.Data;
 using Microsoft.ML.Trainers;
 using Microsoft.ML.Trainers.FastTree;
 using AI_Server.Infrastructure.Models.IntentModel;
-
 namespace AI_Server
 {
     public partial class IntentModel
     {
-        public const string RetrainFilePath =  @"F:\iti\.net full stack\final project\AI GitHub Repo\AI_Server\AI_Server\Models\Intent\Training Data\bitext_ecommerce_with_greeting_embeddings.csv";
+        public const string RetrainFilePath =  @"F:\iti\.net full stack\final project\AI GitHub Repo\intent_model\training data\bitext_ecommerce_with_greeting_embeddings(3).csv";
         public const char RetrainSeparatorChar = ',';
         public const bool RetrainHasHeader =  true;
         public const bool RetrainAllowQuoting =  false;
@@ -94,7 +93,7 @@ namespace AI_Server
             var pipeline = mlContext.Transforms.Text.FeaturizeText(inputColumnName:@"text",outputColumnName:@"text")      
                                     .Append(mlContext.Transforms.Concatenate(@"Features", new []{@"text"}))      
                                     .Append(mlContext.Transforms.Conversion.MapValueToKey(outputColumnName:@"intent",inputColumnName:@"intent",addKeyValueAnnotationsAsText:false))      
-                                    .Append(mlContext.MulticlassClassification.Trainers.OneVersusAll(binaryEstimator:mlContext.BinaryClassification.Trainers.FastForest(new FastForestBinaryTrainer.Options(){NumberOfTrees=4,NumberOfLeaves=4,FeatureFraction=1F,LabelColumnName=@"intent",FeatureColumnName=@"Features"}),labelColumnName:@"intent"))      
+                                    .Append(mlContext.MulticlassClassification.Trainers.OneVersusAll(binaryEstimator:mlContext.BinaryClassification.Trainers.FastTree(new FastTreeBinaryTrainer.Options(){NumberOfLeaves=4,MinimumExampleCountPerLeaf=20,NumberOfTrees=4,MaximumBinCountPerFeature=254,FeatureFraction=1,LearningRate=0.09999999999999998,LabelColumnName=@"intent",FeatureColumnName=@"Features",DiskTranspose=false}),labelColumnName: @"intent"))      
                                     .Append(mlContext.Transforms.Conversion.MapKeyToValue(outputColumnName:@"PredictedLabel",inputColumnName:@"PredictedLabel"));
 
             return pipeline;

@@ -30,6 +30,19 @@ builder.Services.AddAutoMapper(op => op.AddProfile(typeof(MappingProfile)));
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("DevCors", cors =>
+    {
+        cors.WithOrigins("http://localhost:4200")  // Angular dev server origin
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+        // If you send cookies/auth headers, also add .AllowCredentials()
+    });
+});
+
+
 //swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -46,7 +59,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseRouting();
 app.UseHttpsRedirection();
-
+app.UseCors("DevCors");
 app.UseAuthorization();
 
 app.MapControllers();
