@@ -15,12 +15,7 @@
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="10.0.1" />
   </ItemGroup>
   <ItemGroup>
-    <None Update="Models\Mood\MoodModel\MoodModel.mlnet">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup Label="IntentModel">
-    <None Include="Models\Intent\IntentModel\IntentModel.mlnet">
+    <None Update="Infrastructure\Models\Mood\MoodModel\MoodModel.mlnet">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

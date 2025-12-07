@@ -1,0 +1,67 @@
+using AI_Server;
+using AI_Server.Infrastructure.Models.IntentModel;
+using Microsoft.ML;
+using Microsoft.Extensions.ML;
+using AI_Server.Infrastructure.Models.MoodModel;
+using AI_Server.Application.Mapping;
+using AI_Server.Infrastructure.Repositories.GenericClassificationModelRepo.Interfaces;
+using AI_Server.Infrastructure.Repositories.GenericClassificationModelRepo.Services;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+#region register_modelEngine
+builder.Services.AddPredictionEnginePool<MoodInput, MoodOutput>()
+    .FromFile("./Infrastructure/Models/Mood/MoodModel/MoodModel.mlnet");
+builder.Services.AddPredictionEnginePool<IntentInput, IntentOutput>()
+    .FromFile("./Infrastructure/Models/Intent/IntentModel/IntentModel.mlnet");
+#endregion
+builder.Services
+    .AddScoped
+    <IGenericClassificationModel<MoodOutput,MoodInput>
+    ,GenericClassificationModelService<MoodOutput,MoodInput>>();
+builder.Services
+    .AddScoped
+    <IGenericClassificationModel<IntentOutput, IntentInput>
+    , GenericClassificationModelService<IntentOutput, IntentInput>>();
+
+builder.Services.AddAutoMapper(op => op.AddProfile(typeof(MappingProfile)));
+
+builder.Services.AddControllers();
+// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+builder.Services.AddOpenApi();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("DevCors", cors =>
+    {
+        cors.WithOrigins("http://localhost:4200")  // Angular dev server origin
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+        // If you send cookies/auth headers, also add .AllowCredentials()
+    });
+});
+
+
+//swagger
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.MapOpenApi();
+    app.UseDeveloperExceptionPage(); // Shows detailed error page
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseRouting();
+app.UseHttpsRedirection();
+app.UseCors("DevCors");
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();
