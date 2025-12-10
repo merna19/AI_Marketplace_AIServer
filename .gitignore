@@ -426,3 +426,4 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+/AI_Server/AI_Server/appsettings.Development.json
