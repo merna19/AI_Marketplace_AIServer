@@ -1,4 +1,4 @@
-﻿using AI_Server.Infrastructure.Models.IntentModel;
+﻿using AI_Server.Infrastructure.Interfaces.IntentModel;
 using Microsoft.ML;
 using Microsoft.Extensions.ML;
 using AI_Server.Infrastructure.Repositories.GenericClassificationModelRepo.Interfaces;
@@ -19,7 +19,7 @@ namespace AI_Server.Infrastructure.Repositories.GenericClassificationModelRepo.S
             //remove comma
             prompt=prompt?.Replace(",","");
             //Lower Case conversion
-            prompt = prompt.ToLower();
+            prompt = prompt?.ToLower();
         }
         public TOutModel Predict(TInModel NormalizedPrompt)
         {

@@ -5,54 +5,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using AI_Server.Infrastructure.Models.MoodModel;
+using AI_Server.Infrastructure.Interfaces.MoodModel;
+
 namespace AI_Server
 {
     public partial class MoodModel
     {
-        /// <summary>
-        /// model input class for MoodModel.
-        /// </summary>
-        #region model input class
-        //public class MoodInput
-        //{
-        //    [LoadColumn(0)]
-        //    [ColumnName(@"text")]
-        //    public string Text { get; set; }
-
-        //    [LoadColumn(1)]
-        //    [ColumnName(@"label")]
-        //    public string Label { get; set; }
-
-        //}
-
-        //#endregion
-
-        ///// <summary>
-        ///// model output class for MoodModel.
-        ///// </summary>
-        //#region model output class
-        //public class MoodOutput
-        //{
-        //    [ColumnName(@"text")]
-        //    public float[] Text { get; set; }
-
-        //    [ColumnName(@"label")]
-        //    public uint Label { get; set; }
-
-        //    [ColumnName(@"Features")]
-        //    public float[] Features { get; set; }
-
-        //    [ColumnName(@"PredictedLabel")]
-        //    public string PredictedLabel { get; set; }
-
-        //    [ColumnName(@"Score")]
-        //    public float[] Score { get; set; }
-
-        //}
-
-        #endregion
-
         private static string MLNetModelPath = Path.GetFullPath("MoodModel.mlnet");
 
         public static readonly Lazy<PredictionEngine<MoodInput, MoodOutput>> PredictEngine = new Lazy<PredictionEngine<MoodInput, MoodOutput>>(() => CreatePredictEngine(), true);
@@ -129,10 +87,6 @@ namespace AI_Server
         public static MoodOutput Predict(MoodInput input)
         {
             var predEngine = PredictEngine.Value;
-            if(predEngine==null)
-            {
-                throw (new Exception("ENGINE EMPTY"));
-            }
             return predEngine.Predict(input);
         }
     }

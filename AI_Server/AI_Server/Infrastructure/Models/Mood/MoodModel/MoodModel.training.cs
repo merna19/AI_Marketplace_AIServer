@@ -8,13 +8,14 @@ using System.Threading.Tasks;
 using Microsoft.ML;
 using Microsoft.ML.Data;
 using Microsoft.ML.Trainers;
-using AI_Server.Infrastructure.Models.MoodModel;
+using Microsoft.ML.Trainers.LightGbm;
+using AI_Server.Infrastructure.Interfaces.MoodModel;
 
 namespace AI_Server
 {
     public partial class MoodModel
     {
-        public const string RetrainFilePath =  @"F:\iti\.net full stack\final project\AI GitHub Repo\AI_Server\AI_Server\Models\Mood\Training Data\mood_dataset7.csv";
+        public const string RetrainFilePath =  @"F:\iti\.net full stack\final project\AI GitHub Repo\AI_Server\AI_Server\Infrastructure\Models\Mood\Training Data\mood_dataset9.csv";
         public const char RetrainSeparatorChar = ',';
         public const bool RetrainHasHeader =  true;
         public const bool RetrainAllowQuoting =  false;
@@ -90,10 +91,10 @@ namespace AI_Server
         public static IEstimator<ITransformer> BuildPipeline(MLContext mlContext)
         {
             // Data process configuration with pipeline data transformations
-            var pipeline = mlContext.Transforms.Text.FeaturizeText(inputColumnName:@"text",outputColumnName:@"text")      
-                                    .Append(mlContext.Transforms.Concatenate(@"Features", new []{@"text"}))      
+            var pipeline = mlContext.Transforms.Text.FeaturizeText(inputColumnName:@"prompt",outputColumnName:@"prompt")      
+                                    .Append(mlContext.Transforms.Concatenate(@"Features", new []{@"prompt"}))      
                                     .Append(mlContext.Transforms.Conversion.MapValueToKey(outputColumnName:@"label",inputColumnName:@"label",addKeyValueAnnotationsAsText:false))      
-                                    .Append(mlContext.MulticlassClassification.Trainers.LbfgsMaximumEntropy(new LbfgsMaximumEntropyMulticlassTrainer.Options(){L1Regularization=1F,L2Regularization=1F,LabelColumnName=@"label",FeatureColumnName=@"Features"}))      
+                                    .Append(mlContext.MulticlassClassification.Trainers.LightGbm(new LightGbmMulticlassTrainer.Options(){NumberOfLeaves=4,NumberOfIterations=1231,MinimumExampleCountPerLeaf=20,LearningRate=0.5334113984592437,LabelColumnName=@"label",FeatureColumnName=@"Features",Booster=new GradientBooster.Options(){SubsampleFraction=0.9999997766729865,FeatureFraction=0.99999999,L1Regularization=3.032742473458516E-10,L2Regularization=0.9999997766729865},MaximumBinCountPerFeature=242}))      
                                     .Append(mlContext.Transforms.Conversion.MapKeyToValue(outputColumnName:@"PredictedLabel",inputColumnName:@"PredictedLabel"));
 
             return pipeline;

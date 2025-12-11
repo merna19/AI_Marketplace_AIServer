@@ -1,13 +1,13 @@
 ﻿
 using Microsoft.ML.Data;
 
-namespace AI_Server.Infrastructure.Models.MoodModel
+namespace AI_Server.Infrastructure.Interfaces.MoodModel
 {
     public class MoodInput
     {
         [LoadColumn(0)]
-        [ColumnName(@"text")]
-        public string Text { get; set; }
+        [ColumnName(@"prompt")]
+        public string Prompt { get; set; }
 
         [LoadColumn(1)]
         [ColumnName(@"label")]

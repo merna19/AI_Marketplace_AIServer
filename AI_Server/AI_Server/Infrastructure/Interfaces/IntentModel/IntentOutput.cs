@@ -1,6 +1,6 @@
 ﻿using Microsoft.ML.Data;
 
-namespace AI_Server.Infrastructure.Models.IntentModel
+namespace AI_Server.Infrastructure.Interfaces.IntentModel
 {
     public class IntentOutput
     {

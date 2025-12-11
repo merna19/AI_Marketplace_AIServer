@@ -8,13 +8,13 @@
     "KeepPunctuations": false,
     "AllowQuoting": false,
     "Type": "TabularFile",
-    "FilePath": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\intent_model\\training data\\bitext_ecommerce_with_greeting_embeddings(3).csv",
+    "FilePath": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Infrastructure\\Models\\Intent\\Training Data\\bitext_ecommerce_Finally.csv",
     "Delimiter": ",",
     "DecimalMarker": ".",
     "HasHeader": true,
     "ColumnProperties": [
       {
-        "ColumnName": "text",
+        "ColumnName": "prompt",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "String",
         "IsCategorical": false,
@@ -22,7 +22,7 @@
         "Version": 5
       },
       {
-        "ColumnName": "intent",
+        "ColumnName": "label",
         "ColumnPurpose": "Label",
         "ColumnDataFormat": "String",
         "IsCategorical": true,
@@ -42,18 +42,18 @@
       {
         "Version": 1,
         "Type": "Trial",
-        "TrainerName": "FastTreeOva",
-        "Score": 0.92105037597650552,
-        "RuntimeInSeconds": 112.214,
+        "TrainerName": "LbfgsLogisticRegressionOva",
+        "Score": 0.991279454672233,
+        "RuntimeInSeconds": 42.7,
         "Parameter": {
-          "_SCHEMA_": "e0 * e1 * e2 * e3 * e10",
+          "_SCHEMA_": "e0 * e1 * e2 * e6 * e10",
           "e0": {
-            "InputColumnName": "text",
-            "OutputColumnName": "text"
+            "InputColumnName": "prompt",
+            "OutputColumnName": "prompt"
           },
           "e1": {
             "InputColumnNames": [
-              "text"
+              "prompt"
             ],
             "OutputColumnName": "Features"
           },
@@ -62,8 +62,43 @@
             "InputColumnName": "PredictedLabel"
           },
           "e2": {
-            "OutputColumnName": "intent",
-            "InputColumnName": "intent",
+            "OutputColumnName": "label",
+            "InputColumnName": "label",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "label",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastTreeOva",
+        "Score": 0.932338589971031,
+        "RuntimeInSeconds": 63.469,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e10",
+          "e0": {
+            "InputColumnName": "prompt",
+            "OutputColumnName": "prompt"
+          },
+          "e1": {
+            "InputColumnNames": [
+              "prompt"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e10": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "OutputColumnName": "label",
+            "InputColumnName": "label",
             "AddKeyValueAnnotationsAsText": false
           },
           "e3": {
@@ -73,7 +108,7 @@
             "MaximumBinCountPerFeature": 254,
             "FeatureFraction": 1.0,
             "LearningRate": 0.099999999999999978,
-            "LabelColumnName": "intent",
+            "LabelColumnName": "label",
             "FeatureColumnName": "Features",
             "DiskTranspose": false
           }
@@ -95,7 +130,7 @@
     },
     "Schema": "e0 * e1 * e2 * (e3 + e4 + e5 + e6 + e7 + e8 + e9) * e10",
     "MetricName": "MacroAccuracy",
-    "ModelFilePath": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Models\\Intent\\IntentModel\\IntentModel.mlnet"
+    "ModelFilePath": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Infrastructure\\Models\\Intent\\IntentModel\\IntentModel.mlnet"
   },
   "Type": "TrainingConfig",
   "Version": 5,
@@ -104,9 +139,9 @@
     "Subsampling": false,
     "Tuner": "eci-cfo",
     "Type": "ClassificationTrainingOption",
-    "TrainingTime": 120,
+    "TrainingTime": 150,
     "OptimizeMetric": "MacroAccuracy",
-    "LabelColumn": "intent",
+    "LabelColumn": "label",
     "AvailableTrainers": [
       "SDCA",
       "LBFGS",
