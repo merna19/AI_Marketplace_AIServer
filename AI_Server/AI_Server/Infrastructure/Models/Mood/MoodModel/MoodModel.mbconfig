@@ -8,13 +8,13 @@
     "KeepPunctuations": false,
     "AllowQuoting": false,
     "Type": "TabularFile",
-    "FilePath": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Models\\Mood\\Training Data\\mood_dataset7.csv",
+    "FilePath": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Infrastructure\\Models\\Mood\\Training Data\\mood_dataset9.csv",
     "Delimiter": ",",
     "DecimalMarker": ".",
     "HasHeader": true,
     "ColumnProperties": [
       {
-        "ColumnName": "text",
+        "ColumnName": "prompt",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "String",
         "IsCategorical": false,
@@ -42,18 +42,60 @@
       {
         "Version": 1,
         "Type": "Trial",
-        "TrainerName": "LbfgsMaximumEntropyMulti",
-        "Score": 0.99401958343705932,
-        "RuntimeInSeconds": 3.835,
+        "TrainerName": "LightGbmMulti",
+        "Score": 0.99176521642241022,
+        "RuntimeInSeconds": 61.936,
         "Parameter": {
-          "_SCHEMA_": "e0 * e1 * e2 * e7 * e10",
+          "_SCHEMA_": "e0 * e1 * e2 * e5 * e10",
           "e0": {
-            "InputColumnName": "text",
-            "OutputColumnName": "text"
+            "InputColumnName": "prompt",
+            "OutputColumnName": "prompt"
           },
           "e1": {
             "InputColumnNames": [
-              "text"
+              "prompt"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e10": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "OutputColumnName": "label",
+            "InputColumnName": "label",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e5": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 0.53341139845924368,
+            "NumberOfTrees": 1231,
+            "SubsampleFraction": 0.99999977667298645,
+            "MaximumBinCountPerFeature": 242,
+            "FeatureFraction": 0.99999999,
+            "L1Regularization": 3.0327424734585161E-10,
+            "L2Regularization": 0.99999977667298645,
+            "LabelColumnName": "label",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LbfgsMaximumEntropyMulti",
+        "Score": 0.99075404749278462,
+        "RuntimeInSeconds": 3.27,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e7 * e10",
+          "e0": {
+            "InputColumnName": "prompt",
+            "OutputColumnName": "prompt"
+          },
+          "e1": {
+            "InputColumnNames": [
+              "prompt"
             ],
             "OutputColumnName": "Features"
           },
@@ -78,17 +120,17 @@
         "Version": 1,
         "Type": "Trial",
         "TrainerName": "FastForestOva",
-        "Score": 0.990065554725749,
-        "RuntimeInSeconds": 11.875,
+        "Score": 0.92970908891898885,
+        "RuntimeInSeconds": 9.972,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2 * e4 * e10",
           "e0": {
-            "InputColumnName": "text",
-            "OutputColumnName": "text"
+            "InputColumnName": "prompt",
+            "OutputColumnName": "prompt"
           },
           "e1": {
             "InputColumnNames": [
-              "text"
+              "prompt"
             ],
             "OutputColumnName": "Features"
           },
@@ -113,18 +155,54 @@
       {
         "Version": 1,
         "Type": "Trial",
-        "TrainerName": "LightGbmMulti",
-        "Score": 0.95996134583176185,
-        "RuntimeInSeconds": 3.046,
+        "TrainerName": "FastForestOva",
+        "Score": 0.92958683483527971,
+        "RuntimeInSeconds": 12.193,
         "Parameter": {
-          "_SCHEMA_": "e0 * e1 * e2 * e5 * e10",
+          "_SCHEMA_": "e0 * e1 * e2 * e4 * e10",
           "e0": {
-            "InputColumnName": "text",
-            "OutputColumnName": "text"
+            "InputColumnName": "prompt",
+            "OutputColumnName": "prompt"
           },
           "e1": {
             "InputColumnNames": [
-              "text"
+              "prompt"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e10": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "OutputColumnName": "label",
+            "InputColumnName": "label",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e4": {
+            "NumberOfTrees": 8,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 0.99195915,
+            "LabelColumnName": "label",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmMulti",
+        "Score": 0.87055935654852412,
+        "RuntimeInSeconds": 4.626,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e5 * e10",
+          "e0": {
+            "InputColumnName": "prompt",
+            "OutputColumnName": "prompt"
+          },
+          "e1": {
+            "InputColumnNames": [
+              "prompt"
             ],
             "OutputColumnName": "Features"
           },
@@ -151,46 +229,6 @@
             "FeatureColumnName": "Features"
           }
         }
-      },
-      {
-        "Version": 1,
-        "Type": "Trial",
-        "TrainerName": "FastTreeOva",
-        "Score": 0.81024505208046882,
-        "RuntimeInSeconds": 9.696,
-        "Parameter": {
-          "_SCHEMA_": "e0 * e1 * e2 * e3 * e10",
-          "e0": {
-            "InputColumnName": "text",
-            "OutputColumnName": "text"
-          },
-          "e1": {
-            "InputColumnNames": [
-              "text"
-            ],
-            "OutputColumnName": "Features"
-          },
-          "e10": {
-            "OutputColumnName": "PredictedLabel",
-            "InputColumnName": "PredictedLabel"
-          },
-          "e2": {
-            "OutputColumnName": "label",
-            "InputColumnName": "label",
-            "AddKeyValueAnnotationsAsText": false
-          },
-          "e3": {
-            "NumberOfLeaves": 4,
-            "MinimumExampleCountPerLeaf": 20,
-            "NumberOfTrees": 4,
-            "MaximumBinCountPerFeature": 254,
-            "FeatureFraction": 1.0,
-            "LearningRate": 0.099999999999999978,
-            "LabelColumnName": "label",
-            "FeatureColumnName": "Features",
-            "DiskTranspose": false
-          }
-        }
       }
     ],
     "Estimators": {
@@ -208,7 +246,7 @@
     },
     "Schema": "e0 * e1 * e2 * (e3 + e4 + e5 + e6 + e7 + e8 + e9) * e10",
     "MetricName": "MacroAccuracy",
-    "ModelFilePath": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Models\\Mood\\Model\\MoodModel.mlnet"
+    "ModelFilePath": "F:\\iti\\.net full stack\\final project\\AI GitHub Repo\\AI_Server\\AI_Server\\Infrastructure\\Models\\Mood\\MoodModel\\MoodModel.mlnet"
   },
   "Type": "TrainingConfig",
   "Version": 5,
@@ -216,7 +254,7 @@
     "Version": 2,
     "Subsampling": false,
     "Type": "ClassificationTrainingOption",
-    "TrainingTime": 35,
+    "TrainingTime": 120,
     "LabelColumn": "label",
     "ValidationOption": {
       "Version": 0,

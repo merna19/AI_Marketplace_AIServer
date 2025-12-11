@@ -1,5 +1,5 @@
 ﻿using Microsoft.ML.Data;
-namespace AI_Server.Infrastructure.Models.IntentModel
+namespace AI_Server.Infrastructure.Interfaces.IntentModel
 {
     /// <summary>
     /// model input class for IntentModel.
@@ -7,12 +7,12 @@ namespace AI_Server.Infrastructure.Models.IntentModel
     public class IntentInput
     {
         [LoadColumn(0)]
-        [ColumnName(@"text")]
-        public string Instruction { get; set; }
+        [ColumnName(@"prompt")]
+        public string Prompt { get; set; }
 
         [LoadColumn(1)]
-        [ColumnName(@"intent")]
-        public string Intent { get; set; }
+        [ColumnName(@"label")]
+        public string Label { get; set; }
 
     }
 }

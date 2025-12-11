@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 using Microsoft.ML;
 using Microsoft.ML.Data;
 using Microsoft.ML.Trainers;
-using Microsoft.ML.Trainers.FastTree;
-using AI_Server.Infrastructure.Models.IntentModel;
+using AI_Server.Infrastructure.Interfaces.IntentModel;
+
 namespace AI_Server
 {
     public partial class IntentModel
     {
-        public const string RetrainFilePath =  @"F:\iti\.net full stack\final project\AI GitHub Repo\intent_model\training data\bitext_ecommerce_with_greeting_embeddings(3).csv";
+        public const string RetrainFilePath =  @"F:\iti\.net full stack\final project\AI GitHub Repo\AI_Server\AI_Server\Infrastructure\Models\Intent\Training Data\bitext_ecommerce_Finally.csv";
         public const char RetrainSeparatorChar = ',';
         public const bool RetrainHasHeader =  true;
         public const bool RetrainAllowQuoting =  false;
@@ -90,10 +90,10 @@ namespace AI_Server
         public static IEstimator<ITransformer> BuildPipeline(MLContext mlContext)
         {
             // Data process configuration with pipeline data transformations
-            var pipeline = mlContext.Transforms.Text.FeaturizeText(inputColumnName:@"text",outputColumnName:@"text")      
-                                    .Append(mlContext.Transforms.Concatenate(@"Features", new []{@"text"}))      
-                                    .Append(mlContext.Transforms.Conversion.MapValueToKey(outputColumnName:@"intent",inputColumnName:@"intent",addKeyValueAnnotationsAsText:false))      
-                                    .Append(mlContext.MulticlassClassification.Trainers.OneVersusAll(binaryEstimator:mlContext.BinaryClassification.Trainers.FastTree(new FastTreeBinaryTrainer.Options(){NumberOfLeaves=4,MinimumExampleCountPerLeaf=20,NumberOfTrees=4,MaximumBinCountPerFeature=254,FeatureFraction=1,LearningRate=0.09999999999999998,LabelColumnName=@"intent",FeatureColumnName=@"Features",DiskTranspose=false}),labelColumnName: @"intent"))      
+            var pipeline = mlContext.Transforms.Text.FeaturizeText(inputColumnName:@"prompt",outputColumnName:@"prompt")      
+                                    .Append(mlContext.Transforms.Concatenate(@"Features", new []{@"prompt"}))      
+                                    .Append(mlContext.Transforms.Conversion.MapValueToKey(outputColumnName:@"label",inputColumnName:@"label",addKeyValueAnnotationsAsText:false))      
+                                    .Append(mlContext.MulticlassClassification.Trainers.OneVersusAll(binaryEstimator: mlContext.BinaryClassification.Trainers.LbfgsLogisticRegression(new LbfgsLogisticRegressionBinaryTrainer.Options(){L1Regularization=1F,L2Regularization=1F,LabelColumnName=@"label",FeatureColumnName=@"Features"}), labelColumnName:@"label"))      
                                     .Append(mlContext.Transforms.Conversion.MapKeyToValue(outputColumnName:@"PredictedLabel",inputColumnName:@"PredictedLabel"));
 
             return pipeline;

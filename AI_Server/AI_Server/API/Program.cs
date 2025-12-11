@@ -1,7 +1,8 @@
-using AI_Server.Infrastructure.Models.IntentModel;
+using AI_Server;
+using AI_Server.Infrastructure.Interfaces.IntentModel;
 using Microsoft.ML;
 using Microsoft.Extensions.ML;
-using AI_Server.Infrastructure.Models.MoodModel;
+using AI_Server.Infrastructure.Interfaces.MoodModel;
 using AI_Server.Application.Mapping;
 using AI_Server.Infrastructure.Repositories.GenericClassificationModelRepo.Interfaces;
 using AI_Server.Infrastructure.Repositories.GenericClassificationModelRepo.Services;

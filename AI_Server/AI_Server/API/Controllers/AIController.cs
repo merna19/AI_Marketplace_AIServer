@@ -1,9 +1,9 @@
-﻿using AI_Server.Infrastructure.Models.MoodModel;
+﻿using AI_Server.Infrastructure.Interfaces.MoodModel;
 using AI_Server.Application.Mapping;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using AI_Server.Infrastructure.Models.IntentModel;
+using AI_Server.Infrastructure.Interfaces.IntentModel;
 using AI_Server.Application.DTOs.IntentModel;
 using AI_Server.Application.DTOs.MoodModel;
 using AI_Server.Infrastructure.Repositories.GenericClassificationModelRepo.Interfaces;
@@ -30,7 +30,7 @@ namespace AI_Server.API.Controllers
             MoodInput input=new MoodInput();
             _Mapper.Map(input, inputDTO);
             
-            _MoodRepo.Normalize(input.Text);
+            _MoodRepo.Normalize(input.Prompt);
             MoodOutput Response=_MoodRepo.Predict(input);
             
             MoodModelOutDTO ResponseDTO= _Mapper.Map<MoodModelOutDTO>(Response);
@@ -42,7 +42,7 @@ namespace AI_Server.API.Controllers
         {
             IntentInput input= _Mapper.Map<IntentInput>(inputDTO);
 
-            _IntentRepo.Normalize(input.Instruction);
+            _IntentRepo.Normalize(input.Prompt);
             IntentOutput Response=_IntentRepo.Predict(input);
 
             IntentModelOutDTO ResponseDTO = _Mapper.Map<IntentModelOutDTO>(Response);

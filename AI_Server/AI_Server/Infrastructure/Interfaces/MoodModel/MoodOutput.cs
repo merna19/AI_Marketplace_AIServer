@@ -1,6 +1,6 @@
 ﻿using Microsoft.ML.Data;
 
-namespace AI_Server.Infrastructure.Models.MoodModel
+namespace AI_Server.Infrastructure.Interfaces.MoodModel
 {
     public class MoodOutput
     {

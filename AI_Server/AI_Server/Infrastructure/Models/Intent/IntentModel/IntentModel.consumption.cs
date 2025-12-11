@@ -5,14 +5,13 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using AI_Server.Infrastructure.Models.IntentModel;
+using AI_Server.Infrastructure.Interfaces.IntentModel; 
 
 namespace AI_Server
 {
     public partial class IntentModel
     {
         
-
         private static string MLNetModelPath = Path.GetFullPath("IntentModel.mlnet");
 
         public static readonly Lazy<PredictionEngine<IntentInput, IntentOutput>> PredictEngine = new Lazy<PredictionEngine<IntentInput, IntentOutput>>(() => CreatePredictEngine(), true);
@@ -69,10 +68,10 @@ namespace AI_Server
         {
             var schema = PredictEngine.Value.OutputSchema;
 
-            var labelColumn = schema.GetColumnOrNull("intent");
+            var labelColumn = schema.GetColumnOrNull("label");
             if (labelColumn == null)
             {
-                throw new Exception("intent column not found. Make sure the name searched for matches the name in the schema.");
+                throw new Exception("label column not found. Make sure the name searched for matches the name in the schema.");
             }
 
             // Key values contains an ordered array of the possible labels. This allows us to map the results to the correct label value.

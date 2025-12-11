@@ -1,6 +1,6 @@
-﻿using AI_Server.Infrastructure.Models.MoodModel;
+﻿using AI_Server.Infrastructure.Interfaces.MoodModel;
 using AutoMapper;
-using AI_Server.Infrastructure.Models.IntentModel;
+using AI_Server.Infrastructure.Interfaces.IntentModel;
 using AI_Server.Application.DTOs.IntentModel;
 using AI_Server.Application.DTOs.MoodModel;
 namespace AI_Server.Application.Mapping
@@ -9,9 +9,10 @@ namespace AI_Server.Application.Mapping
     {
         public MappingProfile()
         {
-            CreateMap<MoodInput, MoodModelInDTO>().AfterMap(
-                (src, des)=> { src.Text = des.Prompt; })
+            CreateMap<MoodInput, MoodModelInDTO>()
+                .ForMember(dest => dest.Prompt, op => op.MapFrom(src => src.Prompt))
                 .ReverseMap();
+                
 
 
             CreateMap<MoodOutput, MoodModelOutDTO>()
@@ -23,7 +24,7 @@ namespace AI_Server.Application.Mapping
             //    (src, des) => { src.Instruction = des.Prompt; })
             //    .ReverseMap();
             CreateMap<IntentInput, IntentModelInDTO>()
-                .ForMember(dest => dest.Prompt, opt => opt.MapFrom(src=>src.Instruction))
+                .ForMember(dest => dest.Prompt, opt => opt.MapFrom(src=>src.Prompt))
                 .ReverseMap();
 
 
