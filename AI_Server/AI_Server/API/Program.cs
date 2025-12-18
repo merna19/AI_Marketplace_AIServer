@@ -53,7 +53,8 @@ builder.Services.AddCors(options =>
     {
         cors.WithOrigins("http://localhost:4200")  // Angular dev server origin
             .AllowAnyHeader()
-            .AllowAnyMethod();
+            .AllowAnyMethod()
+            .AllowCredentials();
     });
 });
 
