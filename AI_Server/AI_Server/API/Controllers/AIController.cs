@@ -27,8 +27,7 @@ namespace AI_Server.API.Controllers
         [HttpPost("/MoodModel")]
         public IActionResult PredictMood([FromBody] MoodModelInDTO inputDTO)
         {
-            MoodInput input=new MoodInput();
-            _Mapper.Map(input, inputDTO);
+            MoodInput input=_Mapper.Map<MoodInput>(inputDTO);
             
             _MoodRepo.Normalize(input.Prompt);
             MoodOutput Response=_MoodRepo.Predict(input);

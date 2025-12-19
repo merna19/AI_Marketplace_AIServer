@@ -18,6 +18,7 @@ namespace AI_Server.Application.Mapping
             CreateMap<MoodOutput, MoodModelOutDTO>()
                 .ForMember(dest => dest.Confidence, opt => opt.MapFrom(src => src.Scores.Max()))
                 .ForMember(dest => dest.LabelScores, opt => opt.MapFrom(src => src.Scores))
+                .ForMember(dest=> dest.PredictedLabel, opt=>opt.MapFrom(src=>src.PredictedLabel))
                 .ReverseMap();
 
             //CreateMap<IntentInput, IntentModelInDTO>().AfterMap(
